@@ -7,11 +7,11 @@ def get_next_chunk():
   book = BookManager()
   first_sentence = book.first_sentence()
   # tweet the whole sentence if it's short enough
-  if len(first_sentence) <= 140:
+  if len(first_sentence) <= 280:
     chunk = first_sentence
-  # otherwise just print the first 140 characters
+  # otherwise just print the first 280 characters
   else:
-    chunk = first_sentence[0:140]
+    chunk = first_sentence[0:280]
 
   # delete what we just tweeted from the text file
   book.delete_message(chunk)
